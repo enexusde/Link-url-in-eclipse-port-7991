@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: LinkURLInEclipsePort7991
+Bundle-SymbolicName: LinkURLInEclipsePort7991;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Require-Bundle: org.eclipse.core.runtime;bundle-version="3.33.0",
+ org.eclipse.ui.workbench;bundle-version="3.135.0",
+ org.eclipse.core.filesystem;bundle-version="1.11.100",
+ org.eclipse.core.resources;bundle-version="3.22.100",
+ org.eclipse.ui.ide;bundle-version="3.22.500",
+ org.eclipse.ui;bundle-version="3.207.100",
+ org.eclipse.ui.workbench.texteditor;bundle-version="3.19.100",
+ org.eclipse.ui.forms;bundle-version="3.13.400"
+Bundle-Vendor: e-nexus.de
+Automatic-Module-Name: LinkURLInEclipsePort7991
+Bundle-RequiredExecutionEnvironment: JavaSE-21
+Import-Package: org.eclipse.jface.text
