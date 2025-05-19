@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: LinkURLInEclipsePort7991
 Bundle-SymbolicName: LinkURLInEclipsePort7991;singleton:=true
-Bundle-Version: 1.0.0.qualifier
+Bundle-Version: 1.0.1.qualifier
 Require-Bundle: org.eclipse.core.runtime;bundle-version="3.33.0",
  org.eclipse.ui.workbench;bundle-version="3.135.0",
  org.eclipse.core.filesystem;bundle-version="1.11.100",
