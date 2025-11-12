@@ -48,7 +48,7 @@ jobs:
         xvfb-run eclipse -nosplash -application org.eclipse.pde.Build -build path/to/your/buildfile -headless -Dorg.eclipse.swt.internal.gtk.disableX11=true
         
     - name: Upload JAR as Artifact
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         name: plugin
         path: my-application.jar
