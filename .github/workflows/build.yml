@@ -39,4 +39,4 @@ jobs:
     - name: Build Plugin using Eclipse PDE
       run: |
         cd path/to/your/eclipse/plugin/project
-        eclipse -nosplash -application org.eclipse.pde.Build -build path/to/your/buildfile
+        eclipse -nosplash -application org.eclipse.pde.Build -build path/to/your/buildfile -headless
