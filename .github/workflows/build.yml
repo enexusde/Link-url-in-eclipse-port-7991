@@ -16,11 +16,11 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Setup Java 11
+    - name: Setup Java 21 (Adoptium)
       uses: actions/setup-java@v2
       with:
-        java-version: '11'
-        distribution: 'adoptopenjdk'
+        java-version: '21'
+        distribution: 'adoptium'  # Verwenden von Adoptium für Java 21
 
     - name: Install Eclipse and Dependencies
       run: |
