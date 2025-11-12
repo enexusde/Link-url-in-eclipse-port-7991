@@ -36,10 +36,6 @@ jobs:
         # Erstelle einen Symlink, damit Eclipse im PATH verfügbar ist
         sudo ln -s /opt/eclipse/eclipse /usr/local/bin/eclipse
 
-    - name: Verify Eclipse Installation
-      run: |
-        xvfb-run eclipse -version  -headless -Dorg.eclipse.swt.internal.gtk.disableX11=true
-
     - name: Build Plugin using Eclipse PDE
       run: |
         cd path/to/your/eclipse/plugin/project
