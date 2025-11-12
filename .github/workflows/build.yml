@@ -34,7 +34,7 @@ jobs:
 
     - name: Verify Eclipse Installation
       run: |
-        eclipse -version  # Überprüfe, ob Eclipse korrekt installiert wurde
+        eclipse -version  -headless -Dorg.eclipse.swt.internal.gtk.disableX11=true
 
     - name: Build Plugin using Eclipse PDE
       run: |
