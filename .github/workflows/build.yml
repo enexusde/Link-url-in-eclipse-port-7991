@@ -28,7 +28,7 @@ jobs:
     - name: Install Eclipse IDE
       run: |
         # Download und installiere Eclipse
-        wget -qO- https://download.eclipse.org/technology/epp/downloads/release/2023-09/R/eclipse-java-2023-09-R-linux-gtk-x86_64.tar.gz | tar xz -C /opt
+        wget -qO- https://download.eclipse.org/technology/epp/downloads/release/2023-09/R/eclipse-java-2023-09-R-linux-gtk-x86_64.tar.gz | tar xz --no-same-owner -C /opt
         # Erstelle einen Symlink, damit Eclipse im PATH verfügbar ist
         sudo ln -s /opt/eclipse/eclipse /usr/local/bin/eclipse
 
@@ -39,4 +39,4 @@ jobs:
     - name: Build Plugin using Eclipse PDE
       run: |
         cd path/to/your/eclipse/plugin/project
-        eclipse -nosplash -application org.eclipse.pde.Build -build path/to/your/buildfile -headless
+        eclipse -nosplash -application org.eclipse.pde.Build -build path/to/your/buildfile -headless -Dorg.eclipse.swt.internal.gtk.disableX11=true
