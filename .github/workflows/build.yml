@@ -15,12 +15,18 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
-
+      
+    - name: Show folder structure
+      run: |
+        pwd
+        ls -lat
+        df -h
+        ls
     - name: Install OpenJDK 21
       run: |
         sudo apt-get update
         sudo apt-get install -y openjdk-21-jdk  # Installiere OpenJDK 21
-
+    
     - name: Install X virtual frame buffer (XVFB)
       run: |
         sudo apt-get install xvfb
@@ -40,3 +46,8 @@ jobs:
       run: |
         cd path/to/your/eclipse/plugin/project
         xvfb-run eclipse -nosplash -application org.eclipse.pde.Build -build path/to/your/buildfile -headless -Dorg.eclipse.swt.internal.gtk.disableX11=true
+    - name: Upload JAR as Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: plugin
+          path: my-application.jar
