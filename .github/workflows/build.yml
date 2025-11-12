@@ -16,15 +16,16 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Setup Java 21 (Adoptium)
-      uses: actions/setup-java@v2
-      with:
-        java-version: '21'
-        distribution: 'adoptium'  # Verwenden von Adoptium für Java 21
+    - name: Setup Java 21
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y openjdk-21-jdk  # Installiere OpenJDK 21 auf Ubuntu
+
+    - name: Verify Java Version
+      run: java -version  # Überprüfe die Java-Version, um sicherzustellen, dass OpenJDK 21 installiert ist
 
     - name: Install Eclipse and Dependencies
       run: |
-        sudo apt-get update
         sudo apt-get install -y eclipse
 
     - name: Build Plugin using Eclipse PDE
